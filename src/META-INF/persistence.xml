@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
-  <persistence-unit name="HPVS-2013-1-257664PU" transaction-type="RESOURCE_LOCAL">
+  <persistence-unit name="hpvs-2013-1-4-257664PU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-    <class>Entity.Person</class>
-    <class>Entity.Veterinarian</class>
-    <class>Entity.Vacine</class>
+    <class>Entity.Appointment</class>
+    <class>Entity.MedicalRecord</class>
     <class>Entity.Owner</class>
+    <class>Entity.Person</class>
     <class>Entity.Pet</class>
+    <class>Entity.Vacine</class>
+    <class>Entity.Veterinarian</class>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/mysql?zeroDateTimeBehavior=convertToNull"/>
-      <property name="javax.persistence.jdbc.password" value="257.jfgg.664"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/hpvs?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.password" value="520329"/>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.user" value="dinho"/>
       <property name="eclipselink.ddl-generation" value="create-tables"/>
     </properties>
   </persistence-unit>

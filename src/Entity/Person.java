@@ -67,4 +67,9 @@ public class Person implements Serializable {
     public void setBirthplace(String birthplace){
         this.birthplace=birthplace;
     }
+    
+    @Override
+    public String toString(){
+        return name + " " + lastname;
+    }
 }

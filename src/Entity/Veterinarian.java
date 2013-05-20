@@ -4,19 +4,27 @@
  */
 package Entity;
 
+import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 
 /**
  *
  * @author John F
  */
 @Entity
-public class Veterinarian extends Person {
+@DiscriminatorValue("Veterinarian")
+public class Veterinarian extends Person{
+    
     private String focusofpractice;
     private String specialities;
     private int salary;
     private String graduatedat;
     
+    @OneToMany(mappedBy = "Veterinarian")
+    private List<Appointment> appointment = new ArrayList<>();    
     
     public Veterinarian(){
         super();
