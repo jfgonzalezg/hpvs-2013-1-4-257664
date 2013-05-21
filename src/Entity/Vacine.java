@@ -22,6 +22,7 @@ public class Vacine implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String name;
     private float dosage;
     
@@ -39,5 +40,9 @@ public class Vacine implements Serializable{
     }
     public void setDosage(float dosage){
         this.dosage=dosage;
+    }
+
+    public Long getId() {
+        return id;
     }
 }

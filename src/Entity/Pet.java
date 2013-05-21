@@ -7,6 +7,7 @@ package Entity;
 import java.awt.Image;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -24,6 +25,7 @@ public class Pet implements Serializable{
     
    @Id
    @GeneratedValue(strategy = GenerationType.AUTO)
+   private Long id;
    private String name;
    private String species;
    private int age;
@@ -58,6 +60,14 @@ public class Pet implements Serializable{
     }
     public void setWeight(float weight){
         this.weight=weight;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setOwnerList(List<Owner> findOwners) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
   
 }
