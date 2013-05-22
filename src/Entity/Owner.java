@@ -10,7 +10,6 @@ import java.util.List;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
-import javax.persistence.InheritanceType;
 
 
 
@@ -21,12 +20,20 @@ import javax.persistence.InheritanceType;
 @Entity
 @DiscriminatorValue("Owner")
 public class Owner extends Person{
-    
+        
     public Owner(){
         super();
     }
     
     @OneToMany(mappedBy = "Owner")
     private List<Pet> pet = new ArrayList<>();
+    
+    public List<Pet> getPets(){
+        return pet;
+    }
+    public void setPets(List<Pet> pet){
+        this.pet=pet;
+    }
+        
 
 }
