@@ -25,10 +25,22 @@ public class Veterinarian extends Person{
     
     @OneToMany(mappedBy = "Veterinarian")
     private List<Appointment> appointment = new ArrayList<>();    
-    
-    public Veterinarian(){
+
+    public Veterinarian() {
         super();
     }
+    
+    public Veterinarian(int id, String nam, String lastname, String SSN,
+            String speciali,String focusofpract, int salary,String graduatedat){
+        
+        super(id,nam,lastname,SSN);
+        this.focusofpractice = focusofpract;
+        this.graduatedat=graduatedat;
+        this.salary=salary;
+        this.specialities=speciali;
+    }
+    
+    
     public String getFocusOfPractice(){
         return focusofpractice;
     }

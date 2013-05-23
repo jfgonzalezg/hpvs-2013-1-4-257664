@@ -20,64 +20,81 @@ import javax.persistence.Temporal;
  * @author John F
  */
 @Entity
-@Inheritance(strategy=InheritanceType.JOINED)
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Person implements Serializable {
+
     private String name;
     private String lastname;
     private String SSN;
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date birthday;
     private String birthplace;
-    
     @Id
-    @Column(name="PersonId")
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @Column(name = "PersonId")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    
-    public Person(){
+
+    public Person() {
         super();
     }
-    public String getName(){
+
+    public Person(long id, String nam, String lastname, String SSN) {
+        this.name = nam;
+        this.lastname = lastname;
+        this.SSN = SSN;
+        this.id = id;
+    }
+
+    public String getName() {
         return name;
     }
-    public void setName(String name){
-        this.name=name;
+
+    public void setName(String name) {
+        this.name = name;
     }
-    public String getLastname(){
+
+    public String getLastname() {
         return lastname;
     }
-    public void setLastname(String lastname){
-        this.lastname=lastname;
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
-    public String getSSN(){
+
+    public String getSSN() {
         return SSN;
     }
-    public void setSSN(String SSN){
-        this.SSN=SSN;
+
+    public void setSSN(String SSN) {
+        this.SSN = SSN;
     }
-    public Date getBirthday(){
+
+    public Date getBirthday() {
         return birthday;
     }
-    public void setBirthday(Date birthday){
-        this.birthday=birthday;
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
     }
-    public String getBirthplace(){
+
+    public String getBirthplace() {
         return birthplace;
     }
-    public void setBirthplace(String birthplace){
-        this.birthplace=birthplace;
+
+    public void setBirthplace(String birthplace) {
+        this.birthplace = birthplace;
     }
-    
+
     public Long getId() {
         return id;
     }
-    public void setId(Long id){
+
+    public void setId(Long id) {
         this.id = id;
     }
+
     @Override
-    public String toString(){
+    public String toString() {
         return name + " " + lastname;
     }
-
-    
 }

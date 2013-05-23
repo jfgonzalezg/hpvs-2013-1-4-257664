@@ -37,6 +37,9 @@ public class Pet implements Serializable{
    @OneToOne(mappedBy = "Pet")
    private MedicalRecord medicalRecord;
    
+   
+   
+   
    public String getName(){
         return name;
     }

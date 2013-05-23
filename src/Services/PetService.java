@@ -137,6 +137,8 @@ public class PetService implements Serializable {
         }
     }
     
+    
+    
     private List<Owner> findOwners(Query query){
         List<Owner> owners = new ArrayList<>();
         for (int j = 0; j < query.getResultList().size(); j++){

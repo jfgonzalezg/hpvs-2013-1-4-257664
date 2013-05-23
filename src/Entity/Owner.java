@@ -24,6 +24,12 @@ public class Owner extends Person{
     public Owner(){
         super();
     }
+    public Owner(long id, String nam, String lastname, String SSN, ArrayList<Pet> pets){
+    
+        super(id,nam,lastname,SSN);
+        this.pet=pets;
+    }
+    
     
     @OneToMany(mappedBy = "Owner")
     private List<Pet> pet = new ArrayList<>();
