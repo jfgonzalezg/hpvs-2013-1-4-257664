@@ -1,0 +1,1 @@
+This is JPA Practice of Software Engineering first half of 2013
